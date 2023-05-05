@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using PierresBakery.Models;
 
 
@@ -28,8 +27,19 @@ namespace PierresBakery
       int totalCost = newBread.GetOrderTotal(breadCost, pastryCost);
 
       Console.WriteLine($"The total for your order of {breadInput} bread and {pastryInput} pastries is:");
-
       Console.WriteLine($"${totalCost}");
+
+      Console.WriteLine("Would you like to reset your cart and make another order? (yes/no)");
+      string response = Console.ReadLine().ToLower();
+      if (response == "yes")
+      {
+        Main();
+      }
+      else
+      {
+        Console.WriteLine("Goodbye. Enjoy your baked goods!");
+        Console.WriteLine("----------------------------------------------------------");
+      }
     }
   }
 }
