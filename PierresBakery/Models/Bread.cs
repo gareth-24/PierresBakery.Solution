@@ -6,6 +6,11 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
+    public int BreadNumInput {get; set; }
+    public Bread(int amountOfBread)
+    {
+      BreadNumInput = amountOfBread;
+    }
     public int GetBreadCost(int numberOfLoaves)
     {
       int costOfBreadOrder = 0; // initial cost of the order
@@ -15,4 +20,5 @@ namespace PierresBakery.Models
       return costOfBreadOrder;
     }
   }
+  
 }

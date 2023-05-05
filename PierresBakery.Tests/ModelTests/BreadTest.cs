@@ -11,7 +11,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread();
+      Bread newBread = new Bread(1);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -19,7 +19,7 @@ namespace PierresBakery.Tests
     public void GetBreadCost_ReturnsCostOfSingleLoaf_BreadCost()  //test for an order of 1 bread loaf
     {
       // Arrange
-      Bread newBread = new Bread();
+      Bread newBread = new Bread(1);
       // Act
       int newBreadCost = newBread.GetBreadCost(1);
       // Assert
@@ -30,11 +30,23 @@ namespace PierresBakery.Tests
     public void GetBreadCost_ReturnsCostOfMultipleLoaves_BreadCost()  //test for an order of 7 loaves
     {
       // Arrange
-      Bread newBread = new Bread();
+      Bread newBread = new Bread(7);
       // Act
       int newBreadCost = newBread.GetBreadCost(7);
       // Assert
       Assert.AreEqual(25, newBreadCost); //buy 7 get 2 free, expected cost of $25
+    }
+
+    [TestMethod]
+    public void GetBreadNumInput_ReturnsBreadNumInput_Int()
+    {
+      // Arrange
+      int amountOfBread = 7;
+      Bread newBread = new Bread(amountOfBread);
+      // Act
+      int result = newBread.BreadNumInput;
+      // Assert
+      Assert.AreEqual(amountOfBread, result); // test that the auto-implemented property works
     }
   }
 }
