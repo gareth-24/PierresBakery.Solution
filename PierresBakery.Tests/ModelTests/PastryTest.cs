@@ -26,5 +26,15 @@ namespace PierresBakery.Tests
       Assert.AreEqual(2, newPastryCost);
     }
 
+    [TestMethod]
+    public void GetPastryCost_ReturnsCostOfMultiplePastries_PastryCost()  //test for an order of many pastries
+    {
+      // Arrange
+      Pastry newPastry = new Pastry();
+      // Act
+      int newPastryCost = newPastry.GetPastryCost(7);
+      // Assert
+      Assert.AreEqual(12, newPastryCost); //buying 7, get 1 pastry free
+    }
   }
 }

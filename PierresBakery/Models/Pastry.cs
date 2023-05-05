@@ -9,7 +9,9 @@ namespace PierresBakery.Models
     public int GetPastryCost(int numberOfPastries)
     {
       int costOfPastryOrder = 0;  // initial cost of the order
-      costOfPastryOrder = numberOfPastries*2; // $2 per pastry
+      int multiplesOf4 = numberOfPastries/4;  // $6 for 4 pastries
+      int modulo4OfOrder = numberOfPastries%4;  // $2 for each remaining pastry
+      costOfPastryOrder = (multiplesOf4*6)+(modulo4OfOrder*2);
       return costOfPastryOrder;
     }
   }
