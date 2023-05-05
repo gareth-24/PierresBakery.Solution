@@ -10,14 +10,14 @@ namespace PierresBakery
     public static void Main()
     {
       Console.WriteLine("----------------------------------------------------------");
-      Console.WriteLine("Welcome to Pierre's Bakery!");
+      Console.WriteLine("Welcome to Pierre's Bakery app!");
       Console.WriteLine("----------------------------------------------------------");
       Console.WriteLine("Bread costs $5 each with a deal of buy 2 get 1 free.");
       Console.WriteLine("Pastries cost $2 each with a deal of buy 3 get 1 free.");
-      Console.WriteLine("Enter the number of Bread loaves you would like to buy:");
 
       try
       {
+        Console.WriteLine("Enter the number of Bread loaves you would like to buy:");        
         int breadInput = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the number of Pastries you would like to buy:");
         int pastryInput = int.Parse(Console.ReadLine());        
@@ -30,12 +30,11 @@ namespace PierresBakery
         Console.WriteLine($"The total for your order of {breadInput} bread and {pastryInput} pastries is:");
         Console.WriteLine($"${totalCost}");
       }
-      catch(Exception invalidNumberInput) //WIP: end of program is looping somehow
+      catch(Exception invalidNumberInput)
       {
         Console.WriteLine("!!! Error !!!");
         Console.WriteLine(invalidNumberInput.Message);
-        Console.WriteLine("please enter a valid positive number.");
-        Main();
+        Console.WriteLine("Please enter a valid positive number.");
       }
 
       Console.WriteLine("Would you like to reset your cart and make another order? (yes/no)");
