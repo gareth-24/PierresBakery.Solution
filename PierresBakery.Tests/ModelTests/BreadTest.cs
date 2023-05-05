@@ -21,7 +21,7 @@ namespace PierresBakery.Tests
       // Arrange
       Bread newBread = new Bread(1);
       // Act
-      int newBreadCost = newBread.GetBreadCost(1);
+      int newBreadCost = newBread.GetBreadCost();
       // Assert
       Assert.AreEqual(5, newBreadCost);
     }
@@ -32,7 +32,7 @@ namespace PierresBakery.Tests
       // Arrange
       Bread newBread = new Bread(7);
       // Act
-      int newBreadCost = newBread.GetBreadCost(7);
+      int newBreadCost = newBread.GetBreadCost();
       // Assert
       Assert.AreEqual(25, newBreadCost); //buy 7 get 2 free, expected cost of $25
     }
@@ -44,9 +44,21 @@ namespace PierresBakery.Tests
       int amountOfBread = 7;
       Bread newBread = new Bread(amountOfBread);
       // Act
-      int result = newBread.BreadNumInput;
+      int result = newBread.NumOfBread;
       // Assert
-      Assert.AreEqual(amountOfBread, result); // test that the auto-implemented property works
+      Assert.AreEqual(amountOfBread, result); // test that the auto-implemented property works with get
+    }
+
+    [TestMethod]
+    public void SetBreadNumInput_SetsValueOfBreadNumInput_Void()
+    {
+    // Arrange
+    Bread newBread = new Bread(7);
+    int newNumOfBread = 12;
+    // Act
+    newBread.NumOfBread = newNumOfBread;
+    // Assert
+    Assert.AreEqual(newNumOfBread, newBread.NumOfBread);  // test that the set functionality works
     }
   }
 }
