@@ -6,6 +6,11 @@ namespace PierresBakery.Models
 {
   public class Pastry
   {
-    //properties, constructor
+    public int GetPastryCost(int numberOfPastries)
+    {
+      int costOfPastryOrder = 0;  // initial cost of the order
+      costOfPastryOrder = numberOfPastries*2; // $2 per pastry
+      return costOfPastryOrder;
+    }
   }
 }

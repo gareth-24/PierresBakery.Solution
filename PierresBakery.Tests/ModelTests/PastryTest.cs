@@ -14,5 +14,17 @@ namespace PierresBakery.Tests
       Pastry newPastry = new Pastry();
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+
+    [TestMethod]
+    public void GetPastryCost_ReturnsCostOfSinglePastry_PastryCost()  //test for an order of 1 pastry
+    {
+      // Arrange
+      Pastry newPastry = new Pastry();
+      // Act
+      int newPastryCost = newPastry.GetPastryCost(1);
+      // Assert
+      Assert.AreEqual(2, newPastryCost);
+    }
+
   }
 }
