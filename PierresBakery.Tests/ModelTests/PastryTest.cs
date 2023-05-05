@@ -48,5 +48,17 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(amountOfPastries, result); // test that the auto-implemented property works with get
     }
+
+    [TestMethod]
+    public void SetNumOfPastries_SetsValueOfNumOfPastries_Void()
+    {
+    // Arrange
+    Pastry newPastry = new Pastry(4);
+    int newNumOfPastries = 8;
+    // Act
+    newPastry.NumOfPastries = newNumOfPastries;
+    // Assert
+    Assert.AreEqual(newNumOfPastries, newPastry.NumOfPastries);  // test that the set functionality works
+    }
   }
 }
