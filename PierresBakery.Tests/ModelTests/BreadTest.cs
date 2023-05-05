@@ -25,5 +25,16 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(5, newBreadCost);
     }
+
+    [TestMethod]
+    public void GetBreadCost_ReturnsCostOfMultipleLoaves_BreadCost()  //test for an order of 7 loaves
+    {
+      // Arrange
+      Bread newBread = new Bread();
+      // Act
+      int newBreadCost = newBread.GetBreadCost(7);
+      // Assert
+      Assert.AreEqual(25, newBreadCost); //buy 7 get 2 free, expected cost of $25
+    }
   }
 }
