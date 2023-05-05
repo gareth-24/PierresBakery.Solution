@@ -11,8 +11,9 @@ namespace PierresBakery
   {
     public static void Main()
     {
-      Console.WriteLine("------------------------------");
+      Console.WriteLine("----------------------------------------------------------");
       Console.WriteLine("Welcome to Pierre's Bakery!");
+      Console.WriteLine("----------------------------------------------------------");
       Console.WriteLine("Bread costs $5 each with a deal of buy 2 get 1 free.");
       Console.WriteLine("Pastries cost $2 each with a deal of buy 3 get 1 free.");
       Console.WriteLine("Enter the number of Bread loaves you would like to buy:");
@@ -22,28 +23,17 @@ namespace PierresBakery
 
       Bread newBread = new Bread(breadInput);
       Pastry newPastry = new Pastry(pastryInput);
-      int breadCost = newBread.GetBreadCost;
-      int pastryCost = newPastry.GetPastryCost;
+      int breadCost = newBread.GetBreadCost();
+      int pastryCost = newPastry.GetPastryCost();
       int totalCost = newBread.GetOrderTotal(breadCost, pastryCost);
 
-      Console.WriteLine($"The total for your order of {breadInput} bread and {pastryInput} pastries is");
-      Console.WriteLine(breadCost);
-      Console.WriteLine(totalCost);
+      Console.WriteLine($"The total for your order of {breadInput} bread and {pastryInput} pastries is:");
+
+      Console.WriteLine($"${totalCost}");
     }
   }
 }
-// namespace WeekdayFinder
-// {
-//   public class Program
-//   {
-//     public static void Main()
-//     {
-//       Console.WriteLine("Enter a year:");
-//       int year = int.Parse(Console.ReadLine());
-//       Console.WriteLine("Enter a month(number):");
-//       int month = int.Parse(Console.ReadLine());
-//       Console.WriteLine("Enter a day:");
-//       int day = int.Parse(Console.ReadLine());
+
 //       try
 //       {
 //         DateTime date = new DateTime(year, month, day);
