@@ -4,6 +4,17 @@ using System.Collections.Generic;
 using System.Globalization;
 using PierresBakery.Models;
 
+
+namespace PierresBakery
+{
+  public class Program
+  {
+    public static void Main()
+    {
+      Console.WriteLine("the program is running"); //remove later
+    }
+  }
+}
 // namespace WeekdayFinder
 // {
 //   public class Program
