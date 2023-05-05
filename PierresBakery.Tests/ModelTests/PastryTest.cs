@@ -21,7 +21,7 @@ namespace PierresBakery.Tests
       // Arrange
       Pastry newPastry = new Pastry(1);
       // Act
-      int newPastryCost = newPastry.GetPastryCost(1);
+      int newPastryCost = newPastry.GetPastryCost();
       // Assert
       Assert.AreEqual(2, newPastryCost);
     }
@@ -32,7 +32,7 @@ namespace PierresBakery.Tests
       // Arrange
       Pastry newPastry = new Pastry(7);
       // Act
-      int newPastryCost = newPastry.GetPastryCost(7);
+      int newPastryCost = newPastry.GetPastryCost();
       // Assert
       Assert.AreEqual(12, newPastryCost); //buying 7, get 1 pastry free
     }
