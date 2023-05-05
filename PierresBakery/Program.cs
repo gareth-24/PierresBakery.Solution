@@ -16,11 +16,11 @@ namespace PierresBakery
       Console.WriteLine("Pastries cost $2 each with a deal of buy 3 get 1 free.");
       Console.WriteLine("Enter the number of Bread loaves you would like to buy:");
 
-      int breadInput = int.Parse(Console.ReadLine());
-      Console.WriteLine("Enter the number of Pastries you would like to buy:");
-      int pastryInput = int.Parse(Console.ReadLine());
       try
       {
+        int breadInput = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the number of Pastries you would like to buy:");
+        int pastryInput = int.Parse(Console.ReadLine());        
         Bread newBread = new Bread(breadInput);
         Pastry newPastry = new Pastry(pastryInput);
         int breadCost = newBread.GetBreadCost();
@@ -30,14 +30,13 @@ namespace PierresBakery
         Console.WriteLine($"The total for your order of {breadInput} bread and {pastryInput} pastries is:");
         Console.WriteLine($"${totalCost}");
       }
-      catch(Exception invalidNumberInput) //WIP: console freezing on catch block
+      catch(Exception invalidNumberInput) //WIP: end of program is looping somehow
       {
         Console.WriteLine("!!! Error !!!");
         Console.WriteLine(invalidNumberInput.Message);
         Console.WriteLine("please enter a valid positive number.");
         Main();
       }
-
 
       Console.WriteLine("Would you like to reset your cart and make another order? (yes/no)");
       string response = Console.ReadLine().ToLower();
