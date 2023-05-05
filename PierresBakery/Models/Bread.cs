@@ -23,12 +23,7 @@ namespace PierresBakery.Models
     public int GetOrderTotal(int breadCost, int pastryCost)
     {
       int total = breadCost + pastryCost;
-      // string totalStr = int.Parse(total);
       return total;
     }
   }
-
-
-
-  
 }

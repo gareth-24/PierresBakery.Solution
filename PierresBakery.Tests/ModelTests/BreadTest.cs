@@ -60,5 +60,17 @@ namespace PierresBakery.Tests
     // Assert
     Assert.AreEqual(newNumOfBread, newBread.NumOfBread);  // test that the set functionality works
     }
+
+    [TestMethod]
+    public void GetOrderTotal_ReturnsOrderTotal_Int()
+    {
+      Bread newBread = new Bread(7);
+      Pastry newPastry = new Pastry(7);
+      int breadTotal = newBread.GetBreadCost();
+      int pastryTotal = newPastry.GetPastryCost();
+      int result = newBread.GetOrderTotal(breadTotal, pastryTotal);
+
+      Assert.AreEqual(37, result);
+    }
   }
 }
