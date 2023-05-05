@@ -19,11 +19,15 @@ namespace PierresBakery.Models
       costOfBreadOrder = (multiplesOf3*10)+(modulo3OfOrder*5);
       return costOfBreadOrder;
     }
-    // public int GetOrderTotal()
-    // {
-    //   return (Bread.GetBreadCost()+Pastry.GetPastryCost());
-    // }
+
+    public int GetOrderTotal(int breadCost, int pastryCost)
+    {
+      int total = breadCost + pastryCost;
+      // string totalStr = int.Parse(total);
+      return total;
+    }
   }
+
 
 
   
