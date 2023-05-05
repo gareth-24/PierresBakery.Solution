@@ -2,7 +2,7 @@
 
 #### By _**Gareth Grindeland**_
 
-#### _A basic console appliaction built with C#._
+#### _A basic console application built with C#._
 
 ## Technologies Used
 
@@ -12,7 +12,7 @@
 
 ## Description
 
-_This is a basic console application that allows users to input an order of bakery items to display the total cost.  After running the script, a greeting message will be displayed along with the current prices and deals of the bread and pastries and the user will be prompted to enter in a number. This project was completed as an independent code review for week 8 of Epicodus to demonstrate and understanding of C# classes, namespaces, TDD, and auto-implemented properties._
+_This is a basic console application that allows users to input an order of bakery items to display the total cost.  After running the script, a greeting message will be displayed along with the current prices and deals for the bread and pastries. Next, the user will be prompted to enter in numbers for the amount of items they would like to order. If they do not input a valid integer, the catch block will throw an error message and give the option to restart the app. This project was completed as an independent code review for week 8 of Epicodus to demonstrate and understanding of C# classes, namespaces, TDD, and auto-implemented properties._
 
 ## Setup/Installation Requirements
 
